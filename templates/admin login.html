@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load static %}
+{#<h4 style="..">#}
+{#<marquee direction="right">Admin login</marquee>#}
+{#</h4>#}
+{% include 'head.html' %}
+<h2 align="center" style="color: red">{{ msg }}</h2>
+<form action="/admin_login_details/" method="post">
+    {% csrf_token %}
+<table align="center" border="2">
+    <tr>
+        <th>Admin login</th>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="text" placeholder="username" required autocomplete="on" name="name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="password" placeholder="password" required name="password">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="submit" value="Login">
+        </td>
+    </tr>
+{#    <tr align="center">#}
+{# <td>{{ msg }}</td>#}
+{#</tr>#}
+</table>
+</form>
+
+</body>
+</html>

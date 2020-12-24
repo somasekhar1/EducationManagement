@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+<br>
+<table align="center" border="2">
+    <tr>
+        <th colspan="6">Views students details</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Contact</td>
+        <td>Qualification</td>
+        <td>Course</td>
+        <td>Time</td>
+    </tr>
+    {% for x in student %}
+        <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.contect }}</td>
+        <td>{{ x.qualification }}</td>
+        <td>{{ x.course }}</td>
+        <td>{{ x.timmeing }}</td>
+        </tr>
+    {% endfor %}
+
+<tr align="center">
+    <form action="/studentcsv/" method="post">
+        {% csrf_token %}
+       <td> <input type="submit" value="download"></td>
+       </form>
+</tr>
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- <frameset rows="40%,*" border="0">
+    <frame src="/head/" style="background: orange">
+    <frame src="/menu/" style="background: orange">
+</frameset> -->
+
+<button onclick="confirmation()">Delete</button>
+<a href="action.php" onclick="return confirm('Are you sure to delete?')">Delete</a>
+
+function confirmation(){
+    var result = confirm("Are you sure to delete?");
+    if(result){
+        // Delete logic goes here
+    }
+}

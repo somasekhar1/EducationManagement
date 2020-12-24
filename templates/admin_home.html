@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+
+<h4 align="center" style=".....">
+<button><a href="/addcourse/">Add course</a>&nbsp;</button>
+<button><a href="/course/">view course</a>&nbsp;</button>
+<button><a href="/addfaculty/">add faculty</a>&nbsp;</button>
+<button><a href="/faculty/">view faculty</a>&nbsp;</button>
+<button><a href="/student/">view student details</a></button>
+</h4>
+{% load static %}
+<img src="{% static "student1.jpg" %}" width="320" height="200">
+<img src="{% static "stu.jpg" %}" width="320" height="200">
+<img src="{% static "stu4.jpg" %}" width="320" height="200">
+<img src="{% static "stu3.jpg" %}" width="320" height="200">
+</body>
+</html>

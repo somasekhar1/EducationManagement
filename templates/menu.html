@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+{% load static %}
+<h2 align="center">
+<button><a href="/admin_login/">Admin login</a></button>
+<button><a href="/viewstudent/">student registration</a></button>
+<button><a href="/studentlogin/">student login</a></button>
+</h2>
+<img src="{% static "student1.jpg" %}" width="320" height="200">
+<img src="{% static "stu.jpg" %}" width="320" height="200">
+<img src="{% static "stu4.jpg" %}" width="320" height="200">
+<img src="{% static "stu3.jpg" %}" width="320" height="200">
+</body>
+</html>

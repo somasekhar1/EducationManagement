@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+<h3 align="center" style="color: green">{{ fact }}</h3>
+<h3 align="center">Add Faculty</h3>
+<form action="/facultydetails/" method="post">
+    {% csrf_token %}
+<table align="center" border="2">
+    <tr>
+        <td>
+            <input type="number" placeholder="idno" value="{{x.id }}" required name="f1">
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <input type="text" placeholder="name" required name="f2">
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <input type="number" placeholder="contact no" required name="f3">
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <select name="f4">
+                <option>select your gender</option>
+                <option>Female</option>
+                <option>Male</option>
+            </select>
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            <input type="text" placeholder="username" required name="f5">
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            <input type="password" placeholder="password" required name="f6">
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            <input type="email" placeholder="email" required name="f7">
+        </td>
+    </tr>
+
+     <tr>
+         <td>
+             <select name="f8">
+                 <option>select your course</option>
+                 <option>python</option>
+                 <option>django</option>
+                 <option>java</option>
+                 <option>.Net</option>
+                 <option>Android</option>
+                 <option>PHP</option>
+             </select>
+         </td>
+    </tr>
+<tr>
+    <td>
+        <input type="submit" value="save">
+    </td>
+</tr>
+{#    <tr>#}
+{#        <td></td>#}
+{#        {{ fact }}#}
+{#    </tr>#}
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+<br>
+<h3 align="center" style="color: green">{{ res }}</h3>
+<br>
+<form action="/addcoursedetails/" method="post">
+    {% csrf_token %}
+<table align="center" border="2" aria-colspan="5">
+<tr>
+    <th>Add course</th>
+</tr>
+    <tr>
+        <td>
+            <input type="text" value="{{ cousername }}" placeholder="coursename"  name="name" required>
+        </td>
+    </tr>
+<tr>
+        <td>
+            <input type="number"  value="{{ courseid }}" placeholder="Courseid"  name="cid" required  >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" value="{{  coursefee }}" placeholder="Coursefee"  name="cfee" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" value="{{ courseduration }}" placeholder="courseduration" name="cdur" required>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="submit" value="addcourse">
+        </td>
+    </tr>
+{#    <tr>#}
+{#        <td>#}
+{#            {{ res }}#}
+{#        </td>#}
+{#    </tr>#}
+</table>
+</form>
+</body>
+</html>

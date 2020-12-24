@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+<br>
+<br>
+<table align="center" border="2">
+    <tr>
+        <th colspan="6">course details</th>
+    </tr>
+    <tr>
+        <td>coursename</td>
+        <td>courseid</td>
+        <td>coursefee</td>
+        <td>courseduration(days)</td>
+    </tr>
+    {% for x in msg %}
+        <tr>
+        <td>{{ x.coursename }}</td>
+        <td>{{ x.courseid }}</td>
+        <td>{{ x.coursefee }}</td>
+        <td>{{ x.courseduration }}</td> 
+        </tr>
+    {% endfor %}
+<tr align="center">
+    <form action="/coursecsv/" method="post">
+        {% csrf_token %}
+       <td align="center"> <input type="submit" value="download"></td>
+       </form>
+</tr>
+</table>
+</body>
+</html>
